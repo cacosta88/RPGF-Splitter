@@ -10,7 +10,7 @@ Click on the image above to watch the demo on youtube
 ### This front-end update to the ETH Splitter allows users to divide ETH evenly across up to 25 RetroPGF initiatives with a single action, simplifying the funding distribution for public goods within the Optimism Collective ecosystem.
 ### Project data sourced from https://www.growthepie.xyz/optimism-retropgf-3 as of December 2023.
 
-### By studying this repository, users can learn about integrating JavaScript frameworks with blockchain technologies, handling real-time data fetching, and executing complex smart contract interactions in a user-friendly interface.
+### This repository offers insights into blending JavaScript frameworks with blockchain technologies, managing multidimensional data structures, and facilitating intricate smart contract operations through an intuitive user interface.
 
 
 
