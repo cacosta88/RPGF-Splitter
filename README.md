@@ -9,6 +9,7 @@ Click on the image above to watch the demo on youtube
 
 ### This front-end update to the ETH Splitter allows users to divide ETH evenly across up to 25 RetroPGF initiatives with a single action, simplifying the funding distribution for public goods within the Optimism Collective ecosystem.
 ### Project data sourced from https://www.growthepie.xyz/optimism-retropgf-3 as of December 2023. Here is the dataset being used in this repo: https://github.com/cacosta88/RPGF-Splitter/blob/master/packages/nextjs/public/assets/projects.json
+### `ProjectSplitter.tsx` contains the core component: https://github.com/cacosta88/RPGF-Splitter/blob/master/packages/nextjs/components/splitter-ui/ProjectSplitter.tsx
 
 ### This repository offers insights into blending JavaScript frameworks with blockchain technologies, managing multidimensional data structures, and facilitating intricate smart contract operations through an intuitive user interface.
 
