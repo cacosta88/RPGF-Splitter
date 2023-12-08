@@ -8,6 +8,7 @@ import ProjectSplitter from "~~/components/splitter-ui/ProjectSplitter";
 import { Header } from "~~/components/Header";
 import { useDeployedContractInfo } from "~~/hooks/scaffold-eth";
 
+
 const Home: NextPage = () => {
   const [activeItem, setActiveItem] = useState("split-eth");
   const [splitType, setSplitType] = useState("");

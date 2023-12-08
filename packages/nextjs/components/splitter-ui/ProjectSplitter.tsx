@@ -3,6 +3,8 @@ import projectsData from '/public/assets/projects.json';
 import { useScaffoldContractWrite } from '~~/hooks/scaffold-eth';
 import { EtherInput } from '../scaffold-eth/Input'; 
 
+
+
 const ProjectSplitter = ({ account, splitterContract }) => {
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [inputEthAmount, setInputEthAmount] = useState('');
