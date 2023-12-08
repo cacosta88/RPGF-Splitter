@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Head from "next/head";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
@@ -24,6 +24,12 @@ const Home: NextPage = () => {
   // if (deployedContractData) {
   //   ({ address: splitterContract, abi: splitterAbi } = deployedContractData);
   // }
+
+  useEffect(() => {
+    if (activeItem === "split-tokens" && splitType === "custom-splits") {
+      setSplitType("equal-splits"); // Default to "equal-splits" when switching to token split
+    }
+  }, [activeItem, splitType]);
 
   return (
     <>
@@ -58,26 +64,30 @@ const Home: NextPage = () => {
         </ul>
 
         <select
-          defaultValue="select"
-          className="select select-bordered w-full max-w-xs border-gray-300 bg-new_secondary text-white focus:border-none mt-4 "
-          onChange={e => setSplitType(e.target.value)}
-        >
-          <option value="select" disabled>
-            Select Split Type
-          </option>
-          <option value="equal-splits">Equal Splits</option>
-          <option value="unequal-splits">Unequal Splits</option>
-          <option value="custom-splits">RetroPGF Splits</option>
-        </select>
-        {splitType === "equal-splits" && (
-          <EqualUi splitItem={activeItem} account={account} splitterContract={splitterContract} />
-        )}
-        {splitType === "unequal-splits" && (
-          <UnEqualUi splitItem={activeItem} account={account} splitterContract={splitterContract} />
-        )}
-        {splitType === "custom-splits" && (
-          <ProjectSplitter splitItem={activeItem} account={account} splitterContract={splitterContract} />
-        )}
+  defaultValue="select"
+  className="select select-bordered w-full max-w-xs border-gray-300 bg-new_secondary text-white focus:border-none mt-4 "
+  onChange={e => setSplitType(e.target.value)}
+>
+  <option value="select" disabled>
+    Select Split Type
+  </option>
+  <option value="equal-splits">Equal Splits</option>
+  <option value="unequal-splits">Unequal Splits</option>
+  {activeItem === "split-eth" && (
+    <option value="custom-splits">RetroPGF Splits</option>
+  )}
+</select>
+{splitType === "equal-splits" && (
+      <EqualUi splitItem={activeItem} account={account} splitterContract={splitterContract} />
+    )}
+    {splitType === "unequal-splits" && (
+      <UnEqualUi splitItem={activeItem} account={account} splitterContract={splitterContract} />
+    )}
+    {splitType === "custom-splits" && activeItem === "split-eth" && (
+      <ProjectSplitter splitItem={activeItem} account={account} splitterContract={splitterContract} />
+    )}
+
+
 
       </div>
     </>
