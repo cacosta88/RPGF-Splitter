@@ -4,8 +4,9 @@ import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import EqualUi from "~~/components/splitter-ui/EqualUi";
 import UnEqualUi from "~~/components/splitter-ui/UnEqualUi";
-
-// import { useDeployedContractInfo } from "~~/hooks/scaffold-eth";
+import ProjectSplitter from "~~/components/splitter-ui/ProjectSplitter";
+import { Header } from "~~/components/Header";
+import { useDeployedContractInfo } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
   const [activeItem, setActiveItem] = useState("split-eth");
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
 
   return (
     <>
+
       <Head>
         <title>ETH & Token Splitter</title>
         <meta name="description" content="Created with 🏗 scaffold-eth-2" />
@@ -65,6 +67,7 @@ const Home: NextPage = () => {
           </option>
           <option value="equal-splits">Equal Splits</option>
           <option value="unequal-splits">Unequal Splits</option>
+          <option value="custom-splits">RetroPGF Splits</option>
         </select>
         {splitType === "equal-splits" && (
           <EqualUi splitItem={activeItem} account={account} splitterContract={splitterContract} />
@@ -72,6 +75,10 @@ const Home: NextPage = () => {
         {splitType === "unequal-splits" && (
           <UnEqualUi splitItem={activeItem} account={account} splitterContract={splitterContract} />
         )}
+        {splitType === "custom-splits" && (
+          <ProjectSplitter splitItem={activeItem} account={account} splitterContract={splitterContract} />
+        )}
+
       </div>
     </>
   );
