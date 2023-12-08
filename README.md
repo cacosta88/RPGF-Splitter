@@ -1,11 +1,15 @@
 # ETHSplitter + RPGF Splitter
 
 <p align="center">
-  <img src="https://i.ibb.co/k04QTJP/RPGFSPLIT.png" alt="Screenshot_658">
+
+[![Watch the video](https://img.youtube.com/vi/pth2_8VanvA/maxresdefault.jpg)](https://youtu.be/pth2_8VanvA)
 </p>
 
 ### This front-end update to the ETH Splitter allows users to divide ETH evenly across up to 25 RetroPGF initiatives with a single action, simplifying the funding distribution for public goods within the Optimism Collective ecosystem.
 ### Project data sourced from https://www.growthepie.xyz/optimism-retropgf-3 as of December 2023.
+
+
+
 
 # ETHSplitter
 
