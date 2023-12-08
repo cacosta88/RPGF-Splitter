@@ -1,5 +1,6 @@
 # ETHSplitter + RPGF Splitter
 
+Click on the video below to watch the demo on youtube
 <p align="center">
 
 [![Watch the video](https://img.youtube.com/vi/pth2_8VanvA/maxresdefault.jpg)](https://youtu.be/pth2_8VanvA)
